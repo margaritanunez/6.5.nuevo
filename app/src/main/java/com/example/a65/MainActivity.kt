@@ -5,6 +5,8 @@ import android.os.Bundle
 /*
 Pasos para hacer esta cosa:
 1.. Commit inicial
+2.. agregar dependencias de retrofit
+3.. traducir elementos de  la api a dataclass/POJO
 
  */
 
