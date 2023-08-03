@@ -9,7 +9,7 @@ entrega de parámetros a repository de la interfaz Api
  */
 class Repository(private val apiMars: ApiMars) {
 
-    suspend fun chargeMarterrenos() {
+    suspend fun chargeMarterrenos() : List<Marterreno> {
         val respuesta = apiMars.getData() //paso 16
         if(respuesta.isSuccessful){
             val resp = respuesta.body()
@@ -17,7 +17,7 @@ class Repository(private val apiMars: ApiMars) {
                 return it
             }
         }
-        return emptyList<>()
+        return emptyList()
     }
 
 
