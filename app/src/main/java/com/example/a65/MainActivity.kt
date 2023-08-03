@@ -12,6 +12,12 @@ Pasos para hacer esta cosa:
     5.1.. POJO... construir data class. Aquí es dónde necesitamos traducir los elementos de la api a dataclass
     5.2.. interfaz de operaciones, crear una nueva interface
     5.3.. cliente de retrofit, hacer una clase nueva que se llame retrofit client.
+6.. Crear clase repositorio, pero solo en el paquete data
+7.. Crear package presentation, en dónde irá clase VM
+8.. Agregar dependencia de VM
+9.. Seguir con VM
+10.. Construir un ListFragment en el package presentation
+
  */
 
 class MainActivity : AppCompatActivity() {
