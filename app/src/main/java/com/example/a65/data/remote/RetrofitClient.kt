@@ -10,7 +10,7 @@ punto 5.3
 
 class RetrofitClient { //declaración de una clase
     companion object { // declaración de un estático
-        private const val URL_BASE = "https://android-kotlin-fun-mars-server.appspot.com/realestate" //declaración de una URL
+        private const val URL_BASE = "https://android-kotlin-fun-mars-server.appspot.com/" //declaración de una URL
         fun getRetrofitClient(): ApiMars {//nombre de la interface
             val mRetrofit = Retrofit.Builder().baseUrl(URL_BASE)
                 .addConverterFactory(GsonConverterFactory.create()).build()
