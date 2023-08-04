@@ -29,6 +29,7 @@ class ListFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentListBinding.inflate(layoutInflater, container, false)
+        initAdapter()
         binding.btnCharge.setOnClickListener {
             marterrenoViewModel.getAllMarterrenos()
         } // paso 15
