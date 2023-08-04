@@ -41,6 +41,7 @@ Pasos para hacer esta cosa:
 32.. map, para transformar
 33.. arreglar errores del view model
 34.. ir a ListFragment
+35.. RESOLUCIÓN DE CONFLICTOS EN DAO
 
 
 
