@@ -39,8 +39,8 @@ class ListFragment : Fragment() {
     private fun initAdapter(){
         val adapter = AdapterMarterrenos()
         binding.rv.adapter = adapter
-        marterrenoViewModel.marterrenosLiveData.observe(viewLifecycleOwner){
+        marterrenoViewModel.marterrenosLiveData().observe(viewLifecycleOwner){
             adapter.setData(it)
-        }
+        }//cambiar LiveData por la fx asignada para ello en el viewmodel . p34
     }
 }

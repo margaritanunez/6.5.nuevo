@@ -12,7 +12,7 @@ Pasos para hacer esta cosa:
     5.1.. POJO... construir data class. Aquí es dónde necesitamos traducir los elementos de la api a dataclass
     5.2.. interfaz de operaciones, crear una nueva interface
     5.3.. cliente de retrofit, hacer una clase nueva que se llame retrofit client.
-6.. Crear clase repositorio, pero solo en el paquete data
+6.. Crear clase repositorio, pero solo en el paquete data, queda en esta carpeta porque sirve como director de orquesta entre las clases local y remote
 7.. Crear package presentation, en dónde irá clase VM
 8.. Agregar dependencia de VM
 9.. Seguir con VM
@@ -30,7 +30,19 @@ Pasos para hacer esta cosa:
 21.. agregar setData en Adapter
 22.. agregar layoutmanager donde se encuentre el rv
 23.. agregar init adapter en list fragment.
-24..falta agregar cosas por aquí
+24..falta agregar cosas por aquí de la clase 83
+25.. crear package data.local para room (dao, database, entity)
+26.. crear data class entity, abstract class database, e  interface dao.
+27.. dependencias de room
+28.. entity
+29.. dao
+30.. database
+31.. implementar algo en el repositorio
+32.. map, para transformar
+33.. arreglar errores del view model
+34.. ir a ListFragment
+
+
 
  */
 
