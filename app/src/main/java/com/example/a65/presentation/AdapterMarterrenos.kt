@@ -1,10 +1,13 @@
 package com.example.a65.presentation
 
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Adapter
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
+import com.example.a65.R
 import com.example.a65.data.local.TerrenoEntity
 import com.example.a65.data.remote.Marterreno
 import com.example.a65.databinding.ItemLayoutBinding
@@ -36,6 +39,12 @@ class AdapterMarterrenos : RecyclerView.Adapter<AdapterMarterrenos.ItemLayoutVie
     class ItemLayoutViewHolder (val binding2: ItemLayoutBinding) : RecyclerView.ViewHolder(binding2.root) {
         fun bind(marterreno: TerrenoEntity) { //p34 cambiar Marterreno por TerrenoEntity
             binding2.imgMars.load(marterreno.imgMars)
+            binding2.cv1.setOnClickListener {
+                val bundle = Bundle()
+                bundle.putString("id", marterreno.id )
+                Navigation.findNavController(binding2.root).navigate(R.id.action_listFragment_to_detalleFragment, bundle)
+            }
+
         }
     }
 
