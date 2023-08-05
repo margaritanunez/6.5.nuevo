@@ -27,6 +27,7 @@ class Repository(private val apiMars: ApiMars, private val terrenoDao: TerrenoDa
         }
     } // borrar return it y return empty list p.31
 
+    fun getTerreno(id: String): LiveData<TerrenoEntity> = terrenoDao.getTerreno(id)
 }
 
 fun Marterreno.transformar(): TerrenoEntity =

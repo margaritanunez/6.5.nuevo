@@ -20,4 +20,6 @@ interface TerrenoDao {
     @Query ("SELECT * FROM tabla_terreno order by id ASC") // p29
     fun obtenerTerrenos(): LiveData<List<TerrenoEntity>>
 
+    @Query ("SELECT * FROM tabla_terreno WHERE id = :id ")
+    fun getTerreno(id:String): LiveData<TerrenoEntity>
 }

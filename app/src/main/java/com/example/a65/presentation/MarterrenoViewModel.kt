@@ -26,4 +26,6 @@ class MarterrenoViewModel (application: Application) : AndroidViewModel(applicat
     fun getAllMarterrenos() = viewModelScope.launch{
        repository.chargeMarterrenos() //eliminar  lo de antes de la asignación p33
     }
+
+    fun marterrenoLiveData(id: String) = repository.getTerreno(id)
 }

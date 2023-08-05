@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
+import coil.load
 import com.example.a65.R
 import com.example.a65.databinding.FragmentDetalleBinding
 
@@ -19,6 +21,8 @@ private const val ARG_PARAM1 = "id"
  */
 class DetalleFragment : Fragment() {
     private lateinit var binding: FragmentDetalleBinding
+    private val marterrenoViewModel: MarterrenoViewModel by activityViewModels()
+
     // TODO: Rename and change types of parameters
     private var param1: String? = null
 
@@ -34,7 +38,12 @@ class DetalleFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentDetalleBinding.inflate(layoutInflater, container, false)
-        binding.tvID.text = param1
+        marterrenoViewModel.marterrenoLiveData(param1.toString()).observe(viewLifecycleOwner){
+            binding.tvID.text = it.id
+            binding.tvPrice.text =it.price.toString()
+            binding.tvType.text = it.type
+            binding.imageView.load(it.imgMars)
+        }
         return binding.root
     }
 }
