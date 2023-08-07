@@ -28,4 +28,5 @@ class MarterrenoViewModel (application: Application) : AndroidViewModel(applicat
     }
 
     fun marterrenoLiveData(id: String) = repository.getTerreno(id)
+    // paso 41 c.
 }

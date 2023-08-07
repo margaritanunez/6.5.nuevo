@@ -43,8 +43,12 @@ class AdapterMarterrenos : RecyclerView.Adapter<AdapterMarterrenos.ItemLayoutVie
                 val bundle = Bundle()
                 bundle.putString("id", marterreno.id )
                 Navigation.findNavController(binding2.root).navigate(R.id.action_listFragment_to_detalleFragment, bundle)
-            }
-
+            } //paso 39
+            // al bundle se le pasa una clave  y un valor, en este caso la clave es el nombre que se le entrega y que se encuentra "" y el valor es el nombre de la variable
+            //imaginar al bundle como una cajita que tiene varias casillas , cúando les decimos putAlgo, les damos una clave y un valor. en este caso es putString, lo que significa que son dos string, porque se pasan dos parámetros, uno es la clave y el otro es el valor.
+            // la key es el identificador con el cual pasa al otro lado. la clave es cualquiera que quiera yo.
+            // este bundle  se pasa a la navegación cómo puedes observar.
+            // en detalle fragment obtenemos ese valor
         }
     }
 

@@ -42,8 +42,16 @@ Pasos para hacer esta cosa:
 33.. arreglar errores del view model
 34.. ir a ListFragment
 35.. RESOLUCIÓN DE CONFLICTOS EN DAO
-
-
+36.. Detalle fragment donde se mostrarán los detalles del terreno.
+37.. construir binding en DetalleFragment
+38.. agregar feagment_detalle a navegación
+39-- agregar on click listener en adapter para que cardview seleccionado muestre los detalles de la imagen (pasar navigation). también crear bundle
+40.. obtener valor del bundle en detalle fragment, para ello se debe cambiar valor del ARG_PARAM1 donde en vez de "param1" este se llamará  "id"
+41.. para agregar un nvo. método para obtener un listado o un elemento de la lista, entonces deberemos configurarlo en:
+     a) base de datos (específicamente en dao)
+     b)  repository
+     c) view model
+42.. desde detalle fragmento debemos utilizar al view model para poder obtener la información. Desplegar la información a través de los binding.
 
  */
 

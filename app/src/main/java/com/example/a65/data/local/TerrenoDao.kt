@@ -22,4 +22,6 @@ interface TerrenoDao {
 
     @Query ("SELECT * FROM tabla_terreno WHERE id = :id ")
     fun getTerreno(id:String): LiveData<TerrenoEntity>
+    // para obtener un elemento dado su id. paso 41 a)
+
 }

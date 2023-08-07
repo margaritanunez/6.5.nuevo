@@ -28,6 +28,7 @@ class Repository(private val apiMars: ApiMars, private val terrenoDao: TerrenoDa
     } // borrar return it y return empty list p.31
 
     fun getTerreno(id: String): LiveData<TerrenoEntity> = terrenoDao.getTerreno(id)
+    // 41 b) devuelve un solo terreno. el nombre de la fx debe ser igual al que se encuentra en dao.
 }
 
 fun Marterreno.transformar(): TerrenoEntity =
@@ -36,3 +37,10 @@ fun Marterreno.transformar(): TerrenoEntity =
 // desde un terreno(Marterreno) creamos un Terreno Entity, a través de la función transformar obtenemos una instancia de terrenoEntity
 // los datos se transforman en entidades, los cuáles son introducidos en la base
 
+// la fx del repositorio es manejar fuentes de datos y administrarlas (a la bd, dao y entity).. se encarga de recopilar la información requerida .
+// si queremos agregar un nuevo método para obtener uno o un listado de ´productos debemos agregarlo en view model , repository y Base de datos ( a través del dao)
+// la info está en la BD, el repositorio permite acceder a la info, el vm le pide la info al repositorio porque es el encargado de comunicarse con la vista (presentation)
+// vm toma la info que le proporciona el repositorio y comienza a comunicarla a través de los LiveData
+//Por eso es la vista la que se suscribe como observador a alguna parte del vm
+// el camino siempre es el mismo bd-> repository -> vm
+// la vista solo ve al vm.
